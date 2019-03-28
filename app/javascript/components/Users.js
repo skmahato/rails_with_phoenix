@@ -6,7 +6,7 @@ class Users extends Component {
   	this.state = { users: [] };
   }
   componentDidMount() {
-    fetch('/api/users').then(response => response.json()).then(response => {
+    fetch('http://localhost:4000', {method: 'GET', credentials: 'include'}).then(response => response.json()).then(response => {
       this.setState({ users: response });
       return response;
     });

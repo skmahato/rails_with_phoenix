@@ -40,5 +40,7 @@ defmodule PhxApiWeb.Endpoint do
     key: "_phx_api_key",
     signing_salt: "lfKjgU1t"
 
+  plug CORSPlug
+
   plug PhxApiWeb.Router
 end
