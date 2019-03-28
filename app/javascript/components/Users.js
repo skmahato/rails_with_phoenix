@@ -5,15 +5,25 @@ class Users extends Component {
   	super(props);
   	this.state = { users: [] };
   }
+
   componentDidMount() {
-    fetch('http://localhost:4000', {method: 'GET', credentials: 'include'}).then(response => response.json()).then(response => {
+    this.ajax().then(response => {
       this.setState({ users: response });
       return response;
     });
   }
 
+  ajax = () => {
+    return fetch('http://localhost:4000', {method: 'GET', credentials: 'include'})
+          .then(response => response.json())
+          .catch(error => {
+            return [{ name: "Failed to load", email: "http://localhost:4000" }];
+          })
+  }
+
   render () {
     const { users } = this.state;
+
     return (
       <Fragment>
         {users.map((user) => {
