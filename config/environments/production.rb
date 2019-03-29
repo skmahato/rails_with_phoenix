@@ -64,6 +64,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "rails_with_phoenix_#{Rails.env}"
 
+  config.action_controller.asset_host = "http://18.212.164.13/"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.

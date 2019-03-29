@@ -1,5 +1,5 @@
-import React, { Fragment, Component } from "react"
-import PropTypes from "prop-types"
+import React, { Fragment, Component } from "react";
+
 class Users extends Component {
   constructor(props){
   	super(props);
@@ -38,4 +38,4 @@ class Users extends Component {
   }
 }
 
-export default Users
+export default Users;
