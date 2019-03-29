@@ -51,6 +51,6 @@ config :phoenix, :plug_init_mode, :runtime
 config :phx_api, PhxApi.Repo,
   username: "root",
   password: "mysql",
-  database: "rails_with_phoenix_development",
+  database: "rails_with_phoenix_production",
   hostname: "localhost",
   pool_size: 10
