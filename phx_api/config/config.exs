@@ -30,7 +30,7 @@ config :phoenix, :json_library, Jason
 import_config "#{Mix.env()}.exs"
 
 config :cors_plug,
-  origin: ["http://localhost:3000"],
+  origin: ["http://localhost:3000", "http://18.212.164.13"],
   max_age: 86400,
   methods: ["GET"],
   headers: ["Access-Control-Allow-Origin"]
